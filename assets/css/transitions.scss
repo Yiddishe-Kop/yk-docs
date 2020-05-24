@@ -1,3 +1,4 @@
+/*! purgecss start ignore */
 // Default page transition
 .page-enter-active {
   transition: all 0.3s ease-in;
@@ -10,3 +11,4 @@
   opacity: 0;
   transform: translateY(10px);
 }
+/*! purgecss end ignore */
