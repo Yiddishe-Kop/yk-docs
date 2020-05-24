@@ -23,7 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
-    'assets/css/tailwind.scss',
+    'assets/css/tailwind.css',
     'assets/css/transitions.scss'
   ],
   /*
