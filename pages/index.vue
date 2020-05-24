@@ -1,26 +1,25 @@
 <template>
-  <div class="max-w-6xl mx-auto my-4 p-4">
-    <logo />
-    <h1 class="title">YK Docs</h1>
-    <h2 class="subtitle">Yiddishe-Kop docs (scripts, blog posts, etc)</h2>
-    <h1 class="mt-8">Content</h1>
-    <nuxt-content :document="page" />
+  <div>
+    <nuxt-link to="/wikipedia" class="inline-block mt-6 text-teal-500 underline">וויקיפדיה</nuxt-link>
+    <nuxt-link to="/docs" class="inline-block mt-6 text-teal-500 underline">documentation</nuxt-link>
+
+    <h1 class="mt-8 text-xl font-semibold">Content</h1>
+
+    <nuxt-link v-for="page in pages" :key="page.slug" :to="page.path">
+      <nuxt-content :document="page" class="p-6 my-12 bg-white rounded-lg shadow" />
+    </nuxt-link>
   </div>
 </template>
 
 <script>
-import Logo from "~/components/Logo.vue";
-
 export default {
   async asyncData({ $content }) {
-    const page = await $content("home").fetch();
+    const pages = await $content("docs").fetch();
 
     return {
-      page
+      pages
     };
   },
-  components: {
-    Logo
-  }
+  components: {}
 };
 </script>

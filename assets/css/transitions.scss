@@ -1,0 +1,12 @@
+// Default page transition
+.page-enter-active {
+  transition: all 0.3s ease-in;
+}
+.page-leave-active {
+  transition: none;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
