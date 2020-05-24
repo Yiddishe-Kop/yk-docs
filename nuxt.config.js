@@ -23,6 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
+    'assets/css/tailwind.scss',
     'assets/css/transitions.scss'
   ],
   /*
@@ -35,6 +36,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+      '@nuxtjs/tailwindcss'
   ],
   /*
   ** Nuxt.js modules

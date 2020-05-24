@@ -18,5 +18,7 @@
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^2.0.0"
+  }
 }
