@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: "Wikipedia",
+  name: "wikipedia",
   data() {
     return {
       lang: "he",
