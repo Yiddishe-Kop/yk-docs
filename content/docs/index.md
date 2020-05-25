@@ -1,5 +1,6 @@
 ---
 title: Index
+excerpt: The start of all great things.
 ---
 
 # Hey there!

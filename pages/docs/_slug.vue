@@ -1,12 +1,13 @@
 <template>
   <div>
+    <portal to="page-title">{{ article.title }}</portal>
     <nuxt-link to="/docs" class="text-sm text-gray-500 underline">Back</nuxt-link>
     <div class="my-12 text-center">
       <h2 class="text-4xl font-black text-gray-600">{{ article.title }}</h2>
       <p class="text-sm text-gray-600">{{ article.description }}</p>
     </div>
-    <nuxt-content :document="article" class="p-4 bg-white rounded-lg shadow" />
-    <div class="flex justify-between py-2 mt-4 text-gray-600 border-t-2 border-gray-300">
+    <nuxt-content :document="article" />
+    <div class="flex justify-between py-2 mt-8 text-gray-600">
       <nuxt-link
         v-if="prev"
         :to="{ name: 'docs-slug', params: { slug: prev.slug } }"

@@ -30,7 +30,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    'plugins/prism'
+    'plugins/prism',
+    'plugins/components'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -45,6 +46,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    'portal-vue/nuxt',
   ],
   content: {
     markdown: {

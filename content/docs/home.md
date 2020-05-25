@@ -1,5 +1,6 @@
 ---
 title: Home
+excerpt: Home sweet home.
 ---
 
 # Welcome to our comprehensive docs site!

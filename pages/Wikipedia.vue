@@ -1,5 +1,6 @@
 <template>
   <div class="py-8" :dir="[lang == 'he' ? 'rtl' : 'ltr']">
+    <portal to="page-title">Wikipedia</portal>
     <h1>
       ברוכים הבאים למגרש המשחקים שלנו!
       <select v-model="lang" class="px-2 py-1 mx-2 border rounded">
@@ -10,12 +11,12 @@
     <input
       @keyup.enter="searchWikipedia"
       v-model="query"
-      class="w-full px-4 py-2 mt-2 bg-white rounded-md shadow"
+      class="w-full px-4 py-2 mt-2 text-white bg-gray-700 rounded-md shadow"
       placeholder="חפש כל מה שעולה על דעתך..."
     />
 
     <section class="mt-4 wiki">
-      <div class="p-3 mt-2 bg-white rounded-lg shadow">
+      <div class="p-3 mt-2 overflow-x-auto text-white bg-gray-700 rounded-lg shadow">
         <div v-if="!!result.parse" v-html="result.parse.text && result.parse.text['*']"></div>
         <div
           v-else-if="!!result.error"
@@ -67,7 +68,7 @@ export default {
 <style lang="scss">
 .wiki {
   a {
-    @apply text-blue-700;
+    @apply text-blue-300;
   }
 }
 </style>

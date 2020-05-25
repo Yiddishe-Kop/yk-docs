@@ -40,7 +40,7 @@
     }
     .c {
       fill: currentColor;
-      @apply text-gray-800;
+      @apply text-gray-200;
     }
     &:hover {
       transform: rotate3d(0, 1, 0, 0deg);

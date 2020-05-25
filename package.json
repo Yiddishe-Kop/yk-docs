@@ -17,6 +17,7 @@
     "@tailwindcss/ui": "^0.3.0",
     "node-sass": "^4.14.1",
     "nuxt": "^2.0.0",
+    "portal-vue": "^2.1.7",
     "sass-loader": "^8.0.2"
   },
   "devDependencies": {
