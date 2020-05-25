@@ -36,7 +36,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-      '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss'
   ],
   /*
   ** Nuxt.js modules
@@ -53,20 +53,19 @@ export default {
       }
     }
   },
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
   axios: {
   },
-  /*
-  ** Build configuration
-  */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
     extend(config, ctx) {
+    }
+  },
+  generate: {
+    async routes() {
+      const { $content } = require('@nuxt/content')
+      const files = await $content('docs').only(['path']).fetch()
+      console.log(files)
+
+      return files.map(file => file.path === '/index' ? '/' : file.path)
     }
   }
 }
