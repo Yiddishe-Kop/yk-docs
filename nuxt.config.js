@@ -12,7 +12,8 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' },
     ]
   },
   /*
@@ -24,7 +25,8 @@ export default {
   */
   css: [
     'assets/css/tailwind.css',
-    'assets/css/transitions.scss'
+    'assets/css/article.scss',
+    'assets/css/transitions.scss',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -51,7 +53,7 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'assets/css/dracula.css'
+        theme: '~/assets/css/dracula.scss'
       }
     }
   },
@@ -59,6 +61,14 @@ export default {
   },
   build: {
     extend(config, ctx) {
+    }
+  },
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        const { text } = require('reading-time')(document.text)
+        document.readingTime = text
+      }
     }
   },
   generate: {

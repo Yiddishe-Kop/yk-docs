@@ -59,7 +59,7 @@ pre[class*="language-"] {
   font-size: 0.875rem;
   line-height: 1.75rem;
   border-radius: 0.5rem;
-  margin: 0.5em 0;
+  margin: 2em 0;
   overflow: auto;
   -moz-osx-font-smoothing: auto;
 }
@@ -70,10 +70,13 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: 0.1em;
+:not(pre) > code {
+  padding: 0.1em 0.3em;
   border-radius: 0.3em;
   white-space: normal;
+  background-color: #e2e8f0;
+  color: #2d3748;
+  font-size: 0.9rem;
 }
 
 .token.comment,

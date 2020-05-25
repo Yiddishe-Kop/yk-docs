@@ -23,6 +23,7 @@ module.exports = {
         brand: '#ffad1f'
       },
       fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         mono: ['Cascadia', ...defaultTheme.fontFamily.mono], // font for code snippets 😎
       },
     }
