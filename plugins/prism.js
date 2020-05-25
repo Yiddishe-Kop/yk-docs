@@ -1,7 +1,16 @@
 // import Prism from 'prismjs'
+// import 'prismjs/components/prism-php'
+// import 'prismjs/plugins/line-numbers/prism-line-numbers.js'
+
+export default {
+  // ...
+  mounted() {
+    // Prism.highlightAll()
+  }
+  // ...
+}
 
 // Include language support: (optional)
-// import 'prismjs/components/prism-php'
 // import 'prismjs/components/prism-scss'
 // import 'prismjs/components/prism-markup'
 
