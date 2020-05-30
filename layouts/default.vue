@@ -216,6 +216,14 @@ export default {
         {
           to: "/wikipedia",
           label: "Wikipedia"
+        },
+        {
+          to: "/imud",
+          label: "Page Layout"
+        },
+        {
+          to: "/chumash",
+          label: "עימוד חומש"
         }
       ]
     };

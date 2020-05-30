@@ -1,0 +1,9 @@
+.text-last-center {
+  text-align-last: center;
+}
+
+.cols-2 {
+  columns: 280px 2;
+  column-gap: 1.5rem;
+  column-fill: balance;
+}

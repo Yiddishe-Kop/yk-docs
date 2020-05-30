@@ -1,5 +1,19 @@
 /*! purgecss start ignore */
 
+@font-face {
+  font-family: "Frank";
+  src: url("../fonts/webfonts/PFT_Frank-web.woff2") format("woff2"),
+    url("../fonts/webfonts/PFT_Frank-web.otf") format("ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Frank";
+  src: url("../fonts/webfonts/PFT_Frank\ Bold-web.woff2") format("woff2"),
+    url("../fonts/webfonts/PFT_Frank\ Bold-web.otf") format("ttf");
+  font-weight: bold;
+}
+
 .nuxt-content {
   -moz-osx-font-smoothing: grayscale;
   h2 {

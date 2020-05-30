@@ -25,6 +25,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         mono: ['Cascadia', ...defaultTheme.fontFamily.mono], // font for code snippets 😎
+        frank: ['Frank', 'Inter var', ...defaultTheme.fontFamily.sans]
       },
     }
   },
