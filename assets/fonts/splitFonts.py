@@ -15,10 +15,10 @@ for f in files:
         # STAGE 1: WOFF
         outputFilename = re.sub(fontExtension, '-web.woff2', f)
         sys.argv = [None, f, '--output-file=webfonts/' + outputFilename, '--no-hinting', '--desubroutinize', '--flavor=woff2',
-                    '--layout-features=ccmp,locl,mark,mkmk,kern,rlig,liga,dlig,salt', '--unicodes=U+05B0-05F5,U+E811,U+E802,U+0021,U+003F,U+0030-0039']
+                    '--layout-features=ccmp,locl,mark,mkmk,kern,rlig,liga,dlig,salt', '--unicodes-file=./unicode.txt']
         ss()
         # STAGE 2: OTF
         outputFilename = re.sub(fontExtension, '-web.otf', f)
         sys.argv = [None, f, '--output-file=webfonts/' + outputFilename, '--no-hinting', '--desubroutinize',
-                    '--layout-features=ccmp,locl,mark,mkmk,kern,rlig,liga,dlig,salt', '--unicodes=U+05B0-05F5,U+E811,U+E802,U+0021,U+003F,U+0030-0039']
+                    '--layout-features=ccmp,locl,mark,mkmk,kern,rlig,liga,dlig,salt', '--unicodes-file=./unicode.txt']
         ss()
