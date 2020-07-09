@@ -1,12 +1,15 @@
 <template>
-  <div class="max-w-5xl mx-auto">
-    <portal to="page-title">{{ article.title }}</portal>
+  <div>
+    <!-- <portal to="page-title">{{ article.title }}</portal> -->
     <nuxt-link to="/docs" class="text-sm text-gray-500 underline">Back</nuxt-link>
     <div class="my-12 text-center">
       <h2 class="text-4xl font-black text-gray-600">{{ article.title }}</h2>
       <p class="text-sm text-gray-600">{{ article.description }}</p>
     </div>
-    <nuxt-content :document="article" class="max-w-5xl px-8 py-12 mx-auto md:px-16 lg:px-28" />
+    <nuxt-content
+      :document="article"
+      class="max-w-5xl px-8 py-12 mx-auto rich-text md:px-16 lg:px-28"
+    />
     <div class="flex justify-between py-2 mt-8 text-gray-600">
       <nuxt-link
         v-if="prev"

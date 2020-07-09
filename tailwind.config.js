@@ -25,12 +25,16 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         mono: ['Cascadia', ...defaultTheme.fontFamily.mono], // font for code snippets 😎
-        frank: ['Frank', 'Inter var', ...defaultTheme.fontFamily.sans]
+        frank: ['Frank', 'Inter var', ...defaultTheme.fontFamily.sans],
+        heebo: ['Heebo var', ...defaultTheme.fontFamily.sans],
+        siddur: ['siddur', 'Heebo var', ...defaultTheme.fontFamily.sans],
+        sbl: ['SBLhebrew', 'Heebo var', ...defaultTheme.fontFamily.sans],
       },
     }
   },
   variants: {},
   plugins: [
     require('@tailwindcss/ui'),
+    require('./plugins/typography.js'),
   ]
 }

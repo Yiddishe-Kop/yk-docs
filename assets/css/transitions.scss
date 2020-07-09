@@ -14,4 +14,12 @@
 .transition {
   transition: all 0.3s ease;
 }
+
+.btn-outline {
+  @apply inline-block px-6 py-2 font-bold text-gray-800 bg-gray-100 border-2 border-gray-800 rounded-full;
+  &:hover,
+  &:focus {
+    @apply bg-white;
+  }
+}
 /*! purgecss end ignore */

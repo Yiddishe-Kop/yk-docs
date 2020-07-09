@@ -139,6 +139,6 @@ And here is the updated payment method:
 
 Now it's also very simple to show the discount in all other places:
 
-![On Sale!](/content/img/indesign-scripts-sale.jpeg.png)
+![On Sale!](/content/img/indesign-scripts-sale.jpeg)
 
 So putting your logic in model accessors not only frees up your views from business logic, it also simplifies everything, and when you need to change the logic you can just do it in one place, instead of changing it in all the separate places.
